@@ -1,0 +1,17 @@
+<div class="jumbotron contacttron">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img ng-src="{{ product.imageurl }}" class="img-thumbnail">
+                    <h1 class="product-detail">{{ product.title }}</h1><br/>
+                    <p class="product-detail">{{ product.description }}</p>
+                    <p class="product-detail">{{ product.price | currency:"$":0 }}</p>
+                    <div class="text-center">
+                    <button ng-click="addToCart(product)" class="btn btn-warning center">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

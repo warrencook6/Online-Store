@@ -1,0 +1,16 @@
+<div class="jumbotron appareltron">
+    <div class="container">
+
+    </div>
+</div>
+
+<div class="bgc container">
+    <div class="apps row">
+        <div ng-repeat="c in clothes"class="col-md-3 apps">
+            <a ng-href="/products/{{ c.product_id }}"><img class="img-thumbnail" ng-src="{{ c.imageurl }}"></a>
+            <p>{{ c.title }}</p><br/>
+            <p>{{ c.price | currency:"$":0 }}</p>
+            <button ng-click="addToCart(c)" type="button" class="btn btn-warning">Add to Cart</button>
+        </div>
+    </div>
+</div>

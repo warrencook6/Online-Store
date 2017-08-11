@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CovalenceStore">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="fragment" content="!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ seo.title }}</title>
+    <meta property="og:title" content="{{ seo.title }}">
+    <meta property="twitter:title" content="{{seo.title}}">
+    <meta property="og:image" content="{{ seo.image }}">
+    <meta property="twitter:image" content="{{seo.image}}">
+    <meta property="og:url" content="{{ seo.url }}">
+    <meta property="twitter:url" content="{{ seo.url }}">
+    <meta property="description" content="{{seo.description}}">
+    <meta property=" og:description" content="{{ seo.description }}">
+    <meta property="twitter:description" content="{{ seo.description }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> 
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+    <script src="app.js"></script>    
+    <script src="js/controllers/welcomeController.js"></script>
+    <script src="js/controllers/productController.js"></script>
+    <script src="js/controllers/purchaseController.js"></script>
+    <script src="js/controllers/contactController.js"></script>
+    <script src="js/controllers/miscController.js"></script>
+    <script src="js/controllers/apparelController.js"></script>    
+    <script src="js/services/emailService.js"></script>
+    <script src="js/services/miscService.js"></script>
+    <script src="js/services/apparelService.js"></script>
+    <script src="js/services/productService.js"></script>
+    <script src="js/services/purchaseService.js"></script>
+    <script src="js/services/purchasesFactory.js"></script>
+    <script src="js/services/purchasesdbService.js"></script>
+    <script src="js/services/SEOService.js"></script>
+
+    <title>Covalence Store</title>
+</head>
+    
+<body>
+    <!--navbar-->
+    <nav class= "navbar navbar-inverse">
+        <div class="container">
+            <!--navbar header-->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuItems" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span> 
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icone-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"> 
+                    <img class="logo" style="height: 50px; width: 250px;"src="/images/logo.svg" alt="">
+                </a>
+            </div>  
+            <!--menu items-->
+            <div class="collapse navbar-collapse" id="menuItems">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown mega">
+                        <a href="#" class="dropdown-toggle menu-stuff " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Products <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/apparel">Apparel</a></li>
+                                <li><a href="/misc">Misc</a></li>
+                            </ul>
+                    </li>
+                    <li class="mega"><a class="menu-stuff" href="/contact">Contact us</a></li>
+                    <li class="mega"><a class="cart-text" href="/cart"><span class= "glyphicon glyphicon-shopping-cart"></span>  Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!--place for views-->
+    <div ng-view>
+
+    </div>
+
+
+    <!--html for stripe-->
+    <script type="text/javascript" src="https://js.stripe.com/v2"></script>
+    <script type="text/javascript">
+        Stripe.setPublishableKey('pk_test_lmE0tlXj3002DBIkv3A65Hur');
+        </script>
+</body>
+</html>

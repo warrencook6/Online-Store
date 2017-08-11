@@ -1,0 +1,129 @@
+/*
+GLOBAL STYLEs
+*/
+body {
+    background-color: rgb(39, 49, 57) !important;
+}
+
+/*
+MEDIA QUERIES
+*/
+
+@media (max-width: 770px) {
+    #cart {
+        visibility: visible;
+    }
+}   
+
+
+/*
+BASE NAVBAR STYLES
+*/
+
+.navbar { 
+    border-radius: 0 !important;
+    font-family: 'Noto Sans', sans-serif;
+    /*height: 8rem;*/
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.in {
+    background-color: #333;
+}
+
+.menu-stuff {
+    color: #fff !important;
+}
+
+.cart-text {
+    font-family: 'Noto Sans', sans-serif;
+    color: #fff !important; 
+}
+
+.logo {
+    padding: 0 0 0 0;
+}
+
+.mega {
+    padding: 1.75rem 2rem 0 0 ;
+    color: #fff !important;
+}
+
+/*
+APPAREL
+*/
+.apps{
+    text-align: center;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.bgc {
+    background-color: rgb(39, 49, 57) !important;
+    z-index: -1;
+}
+
+
+/*
+JUMBOTRON / HERO STYLES
+*/
+
+.welcometron {
+    background: url('/images/covalence-store-home-hero.jpg')no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+    /*position: absolute;*/
+}
+
+.contacttron {
+    background: url('/images/covalence-store-home-copy.jpg')no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    z-index: -1;
+    color: #fff;
+}
+
+.appareltron {
+    background: url('/images/covalence-store-apparel-hero.jpg')no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    /*visibility: hidden;    */
+}
+
+.misctron {
+    background: url('/images/covalence-store-misc-hero.jpg')no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.purchasetron {
+    background-color: rgb(39, 49, 57) !important;
+    color: white; 
+}
+
+/*
+SINGLE PRODUCT VIEWS
+*/
+
+.quantity-widget {
+    text-align: center;
+}
+
+.product-detail {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+}
+
+
+/*
+CHECKOUT
+*/
+
+.votingButton a{
+    text-decoration: none !important;
+    color: #fff !important;
+}
